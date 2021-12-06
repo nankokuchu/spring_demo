@@ -1,6 +1,5 @@
-import com.atzzazz.dao.UserDao;
-import com.atzzazz.factory.InstanceFactory;
-import com.atzzazz.service.UserService;
+import com.atzzazz.controller.UserController;
+import com.atzzazz.model.ResultInfo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,9 +12,9 @@ public class Starter {
     public static void main(String[] args) {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-//        UserService userService = (UserService) context.getBean("userService");
-//        userService.printUserService();
-        UserService userService = context.getBean("userService", UserService.class);
-        userService.printUserService();
+
+        UserController userController = context.getBean("userController", UserController.class);
+        ResultInfo resultInfo = userController.userLogin("admin", "123");
+        System.out.println(resultInfo);
     }
 }

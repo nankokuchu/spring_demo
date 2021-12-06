@@ -1,5 +1,7 @@
 package com.atzzazz.dao;
 
+import com.atzzazz.model.ResultInfo;
+import com.atzzazz.pojo.User;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,7 +11,18 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class UserDao {
-    public void printUserDao(){
-        System.out.println("UserDao方法被调用.....");
+
+    private final String USER_NAME = "admin";
+    private final String USER_PASSWORD = "aizhuzhu";
+
+    public User queryByUserName(String userName) {
+        User user = null;
+        if (USER_NAME.equals(userName)) {
+            user = new User();
+            user.setUserId(1);
+            user.setUserName(userName);
+            user.setUserPassword(USER_PASSWORD);
+        }
+        return user;
     }
 }
