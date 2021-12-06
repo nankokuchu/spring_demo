@@ -4,4 +4,7 @@
  * @Date： 2021/12/6 - 12:07
  */
 public class Starter {
+    public static void main(String[] args) {
+
+    }
 }
