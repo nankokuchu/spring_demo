@@ -7,6 +7,6 @@ package com.atzzazz.dao;
  */
 public class UserDao {
     public void printUserDao(){
-        System.out.println("UserDao.....");
+        System.out.println("UserDao方法被调用.....");
     }
 }

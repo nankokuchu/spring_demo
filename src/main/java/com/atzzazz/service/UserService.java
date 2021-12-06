@@ -1,5 +1,7 @@
 package com.atzzazz.service;
 
+import com.atzzazz.dao.UserDao;
+
 /**
  * @Description：$
  * @Author： zzazz
@@ -7,7 +9,16 @@ package com.atzzazz.service;
  */
 public class UserService {
 
-    public void printUserService(){
-        System.out.println("UserService.....");
+    private UserDao userDao;
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
     }
+
+    public void printUserService() {
+        System.out.println("UserService方法被调用.....");
+        userDao.printUserDao();
+    }
+
+
 }

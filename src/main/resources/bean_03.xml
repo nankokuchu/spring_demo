@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--<bean id="userService" class="com.atzzazz.service.UserService"/>-->
+    <!--<bean id="instanceFactory" class="com.atzzazz.factory.InstanceFactory"/>-->
+    <!--<bean id="userDao" factory-bean="instanceFactory" factory-method="getUserDao"/>-->
 
 </beans>
